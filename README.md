@@ -1,5 +1,5 @@
 
-# IP Spoofing Tester v1.0 for Linux
+# IP Spoofing Tester v1.0
 
 ## About the project
 
@@ -10,7 +10,7 @@ susceptibility to spoofed source address IP packets.
 
 ```
   docker login
-  docker run --network=host -it --rm zmaximo1990/caida-spoofer-test:linux
+  docker run --network=host -it --rm zmaximo1990/caida-spoofer-docker:linux
 ```
 
 ## Feedback
