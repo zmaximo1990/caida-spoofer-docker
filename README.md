@@ -10,7 +10,7 @@ susceptibility to spoofed source address IP packets.
 
 ```
   docker login
-  docker run --network=host -it --rm zmaximo1990/caida-spoofer-test
+  docker run --network=host -it --rm zmaximo1990/caida-spoofer-test:alpine
 ```
 
 ## Feedback
