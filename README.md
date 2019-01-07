@@ -9,7 +9,6 @@ susceptibility to spoofed source address IP packets.
 ## Running
 
 ```
-  docker login
   docker run --network=host -it --rm zmaximo1990/caida-spoofer-docker:1.0
 ```
 
