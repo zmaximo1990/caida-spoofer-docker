@@ -34,4 +34,5 @@ RUN tar xzvf spoofer-1.4.1.tar.gz && \
 	cd .. && \
 	rm -rf spoofer-1.4.1 spoofer-1.4.1.tar.gz
 
-ENTRYPOINT ["spoofer-prober", "-v", "-s1", "-r1", "--no-tls"]
+ENTRYPOINT ["/spoofer/entrypoint.sh"]
+CMD ["default"]
