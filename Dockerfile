@@ -18,10 +18,19 @@ RUN apk update \
         iputils \
         tcptraceroute \
         libpcap \
-        libpcap-dev
+        libpcap-dev \
+        whois \
+        curl \
+        ssmtp
 
 RUN mkdir /spoofer
 COPY ./spoofer-1.4.1.tar.gz /spoofer
+
+COPY ./entrypoint.sh /spoofer
+RUN sed -i 's/\r//' /spoofer/entrypoint.sh
+RUN chmod +x /spoofer/entrypoint.sh
+
+COPY ./ssmtp.conf /etc/ssmtp
 
 WORKDIR /spoofer
 
@@ -35,4 +44,3 @@ RUN tar xzvf spoofer-1.4.1.tar.gz && \
 	rm -rf spoofer-1.4.1 spoofer-1.4.1.tar.gz
 
 ENTRYPOINT ["/spoofer/entrypoint.sh"]
-CMD ["default"]
