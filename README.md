@@ -6,7 +6,7 @@
 This image will run the CAIDA Spoofer (http://spoofer.caida.org/) to measure the Internet's
 susceptibility to spoofed source address IP packets.
 
-## Running
+## Run
 
 ```
   docker run --network=host -it --rm zmaximo1990/caida-spoofer-docker:1.0
